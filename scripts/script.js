@@ -11,7 +11,7 @@ const bootScreen = document.getElementById("bootScreen");
 const mainWindow = document.getElementById("mainWindow");
 
 // boot animation c:
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname.endsWith("/") || window.location.pathname.endsWith("index.html")) {
     setTimeout(() => {
         bootScreen.style.opacity = "0";
         setTimeout(() => { // animation
