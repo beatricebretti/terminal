@@ -295,6 +295,15 @@ footer {
         max-height: 80vh;
     }
 
+    .input-line {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        font-family: "Courier New", monospace;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
     .title-bar {
         padding: 8px;
     }
@@ -316,6 +325,15 @@ footer {
     .terminal {
         font-size: 0.9rem;
         padding: 10px;
+    }
+
+    .input-line {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        white-space: nowrap;
     }
 
     .content h1 {
