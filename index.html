@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinka</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="boot-screen" id="bootScreen">
+        <img src="assets/logo.png" alt="Logo" class="boot-logo">
+        <p>Loading OS...</p>
+    </div>
+    
+    <div class="window" id="mainWindow">
+        <div class="title-bar">
+            <span class="title">C:\User\Sinka.no</span>
+            <div class="buttons">
+                <span class="close">✖</span>
+            </div>
+        </div>
+        <div class="terminal" onclick="document.getElementById('input').focus();">
+            <div id="output"></div>
+            <div class="input-line">
+                <span class="prompt">C:\User></span>
+                <input type="text" id="input" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+    <footer>
+        <p>© 2024 Kristoffer Sinkaberg Johansen</p>
+    </footer>
+</body>
+</html>

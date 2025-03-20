@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="windowshow">
+        <div class="title-bar">
+            <span class="title">C:\User\Sinka.no\Contact</span>
+            <div class="buttons">
+                <span class="close">✖</span>
+            </div>
+        </div>
+        <div class="terminal">
+            &gt; <a href="index.html" class="breadcrumb-link">Back to Terminal</a>
+            
+            <h1 class="text-white text-center">Contact</h1>
+            <form class="contact-form">
+                <label for="navn" class="form-label">Navn (påkrevd)</label>
+                <input type="text" id="navn" class="form-input" required>
+                <div class="row">
+                    <div class="col">
+                        <label for="fornavn" class="form-label">Fornavn</label>
+                        <input type="text" id="fornavn" class="form-input">
+                    </div>
+                    <div class="col">
+                        <label for="etternavn" class="form-label">Etternavn</label>
+                        <input type="text" id="etternavn" class="form-input">
+                    </div>
+                </div>
+                <label for="epost" class="form-label">E-Post (påkrevd)</label>
+                <input type="email" id="epost" class="form-input" required>
+                <label for="melding" class="form-label">Melding (påkrevd)</label>
+                <textarea id="melding" class="form-input" rows="4" required></textarea>
+                <button type="submit" class="btn-submit">Send</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Kristoffer Sinkaberg Johansen</p>
+    </footer>
+</body>
+</html>

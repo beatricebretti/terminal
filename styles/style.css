@@ -1,0 +1,261 @@
+/* Back to terminal */
+.breadcrumb-header .breadcrumb-link {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.breadcrumb-link:hover {
+    color: white;  /* White color on hover */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+body {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Boot screen */
+.boot-screen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: opacity 0.1s ease;
+}
+
+.boot-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Window Frame */
+.window {
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;  
+    background: black;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px white;
+    display: none;
+}
+
+.windowshow { /* for the pages that are not index */
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;  
+    background: black;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px white;
+    display: block;
+}
+
+/* Title bar */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 5px 10px;
+    border-bottom: 2px solid white;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.buttons .close {
+    cursor: default;
+    color: red;
+}
+
+/* Terminal Styles */
+.terminal {
+    padding: 30px;
+    font-size: 1.5rem;
+    overflow-y: auto;
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* Header */
+.terminal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terminal-header img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.terminal-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.terminal-header p {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+/* Instructions */
+.instructions {
+    font-size: 1.2rem;
+    color: gray;
+    margin-top: 10px;
+}
+
+/* Input Line */
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prompt {
+    margin-right: 10px;
+}
+
+/* Flickering cursor effect */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.5rem;
+    background-color: white;
+    margin-left: 5px;
+    animation: flicker 0.7s step-end infinite;
+}
+
+/* Animation for the flickering cursor */
+@keyframes flicker {
+    50% {
+        opacity: 0;
+    }
+}
+
+input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    outline: none;
+}
+
+/* About Page */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.linkedin-logo a img {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-logo a img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Page */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.form-input {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    width: 100%;
+    font-family: "Courier New", monospace;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+.btn-submit {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+}
+
+.btn-submit:hover {
+    background: gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    color: gray;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
