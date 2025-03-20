@@ -312,3 +312,36 @@ footer {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .terminal {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 1.2rem;
+    }
+
+    .linkedin-logo a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-submit {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .breadcrumb-link {
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+        display: block;
+    }
+}
