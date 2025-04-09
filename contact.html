@@ -3,47 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Contact - Sinka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <div class="windowshow">
-        <div class="title-bar">
-            <span class="title">C:\User\Sinka.no\Contact</span>
-            <div class="buttons">
-                <span class="close">✖</span>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <span>C:\User\Sinka.no\contact</span>
+            <div class="mt-2">
+                <a href="index.html" class="nav-link">home</a> |
+                <a href="about.html" class="nav-link">about</a> |
+                <a href="projects.html" class="nav-link">projects</a>
             </div>
         </div>
-        <div class="terminal">
-            &gt; <a href="index.html" class="breadcrumb-link">Back to Terminal</a>
-            
-            <h1 class="text-white text-center">Contact</h1>
-            <form class="contact-form">
-                <label for="navn" class="form-label">Navn (påkrevd)</label>
-                <input type="text" id="navn" class="form-input" required>
-                <div class="row">
-                    <div class="col">
-                        <label for="fornavn" class="form-label">Fornavn</label>
-                        <input type="text" id="fornavn" class="form-input">
-                    </div>
-                    <div class="col">
-                        <label for="etternavn" class="form-label">Etternavn</label>
-                        <input type="text" id="etternavn" class="form-input">
-                    </div>
+        <div class="content mt-3">
+            <h1 class="fade-in" style="--delay: 0s">>> contact_me.exe</h1>
+            <!-- Success message alert (hidden by default c:) -->
+            <div id="successMessage" class="alert alert-success d-none" role="alert">
+                Message sent successfully! I’ll get back to you soon.
+            </div>
+            <form id="contactForm">
+                <div class="mb-3 fade-in" style="--delay: 0.2s">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-                <label for="epost" class="form-label">E-Post (påkrevd)</label>
-                <input type="email" id="epost" class="form-input" required>
-                <label for="melding" class="form-label">Melding (påkrevd)</label>
-                <textarea id="melding" class="form-input" rows="4" required></textarea>
-                <button type="submit" class="btn-submit">Send</button>
+                <div class="mb-3 fade-in" style="--delay: 0.4s">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3 fade-in" style="--delay: 0.6s">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-terminal fade-in" style="--delay: 0.8s">Send</button>
             </form>
-            
+        </div>
+        <div class="mt-3">
+            <span class="command-prompt">_</span>
         </div>
     </div>
-
-    <footer>
-        <p>© 2024 Kristoffer Sinkaberg Johansen</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

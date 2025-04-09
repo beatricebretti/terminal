@@ -1,0 +1,194 @@
+body {
+    background: #1a1a1a;
+    color: white;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal-window {
+    background: #000;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    overflow: scroll; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 900px; 
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    position: sticky;
+    top: 0;
+    background: #000; 
+    z-index: 10;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #00ff00;
+}
+
+.content {
+    flex: 1; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    padding-right: 10px; 
+    padding-bottom: 0px;
+}
+
+/* (Chrome, Edge, Safari) */
+.content::-webkit-scrollbar,
+.project-detail-content::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.content::-webkit-scrollbar-track,
+.project-detail-content::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-left: 1px solid #00ff00; 
+}
+
+.content::-webkit-scrollbar-thumb,
+.project-detail-content::-webkit-scrollbar-thumb {
+    background: #00ff00; 
+    border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-thumb:hover,
+.project-detail-content::-webkit-scrollbar-thumb:hover {
+    background: #00cc00; 
+}
+
+/*  Firefox */
+.content,
+.project-detail-content {
+    scrollbar-color: #00ff00 #1a1a1a; 
+    scrollbar-width: thin; 
+}
+
+.content p,
+.content h1,
+.content h3,
+.content h4,
+.content h5 {
+    word-wrap: break-word; 
+    max-width: 100%; 
+}
+
+.nav-link {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #00cc00;
+    text-decoration: underline;
+}
+
+.command-prompt {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.project-card {
+    background: #1a1a1a;
+    border: 1px solid #00ff00;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+img.logo  {
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
+
+/* Project grid styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border: 1px solid #00ff00;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+    cursor: pointer;
+}
+
+.project-card img {
+    max-height: 150px;
+    max-width: 100%; 
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.project-card h5 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Project detail page styles */
+.project-detail-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+#project-details img {
+    max-height: 200px; 
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+#project-details p {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: var(--delay, 0s);
+}
